@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wild Bees Global — Strategic Market Position</title>
+<meta name="description" content="Wild Bees Global strategic positioning in the GCC wholesale poultry market amid supply chain restructuring.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --orange:#fe5400;--teal:#20586d;--gray:#484c4d;
+  --orange-light:#fff0e8;--teal-light:#e8f2f6;--bg:#fafbfc;
+  --surface:#ffffff;--text:#1a1a1a;--text-secondary:#5f6368;
+  --shadow:0 4px 24px rgba(32,88,109,.08);
+  --shadow-lg:0 12px 48px rgba(32,88,109,.12);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6}
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(32,88,109,.06);padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:64px;transition:box-shadow .3s}
+.nav.scrolled{box-shadow:var(--shadow)}
+.nav-logo{height:38px}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--gray);font-size:.85rem;font-weight:500;letter-spacing:.02em;transition:color .25s}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{background:var(--teal);color:#fff;border:none;padding:10px 24px;border-radius:8px;font-size:.85rem;font-weight:600;cursor:pointer;transition:all .25s}
+.nav-cta:hover{background:var(--orange);transform:translateY(-1px)}
+
+/* ── SECTIONS ── */
+.section{min-height:100vh;padding:120px 64px 80px;display:flex;align-items:center;justify-content:center;position:relative}
+.section-inner{max-width:1200px;width:100%;margin:0 auto}
+.section-tag{display:inline-flex;align-items:center;gap:8px;background:var(--teal-light);color:var(--teal);padding:6px 16px;border-radius:20px;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-bottom:20px}
+.section-tag svg{width:14px;height:14px}
+.section-title{font-family:'Outfit',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;color:var(--teal);line-height:1.15;margin-bottom:16px}
+.section-title span{color:var(--orange)}
+.section-subtitle{font-size:1.1rem;color:var(--text-secondary);max-width:640px;line-height:1.7;margin-bottom:40px}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(165deg,#fff 40%,var(--teal-light) 100%);overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.hero-title{font-family:'Outfit',sans-serif;font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;color:var(--teal);line-height:1.1;margin-bottom:20px}
+.hero-title span{color:var(--orange);position:relative}
+.hero-desc{font-size:1.15rem;color:var(--text-secondary);line-height:1.8;margin-bottom:36px;max-width:520px}
+.hero-stats{display:flex;gap:32px}
+.hero-stat{text-align:center}
+.hero-stat-val{font-family:'Outfit',sans-serif;font-size:2.4rem;font-weight:800;color:var(--orange)}
+.hero-stat-label{font-size:.75rem;color:var(--text-secondary);font-weight:500;margin-top:2px}
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;height:480px}
+
+/* ── ANIMATED GLOBE ── */
+.globe-container{width:380px;height:380px;position:relative}
+.globe-ring{position:absolute;border:2px solid var(--teal);border-radius:50%;opacity:.15;animation:pulseRing 3s ease-in-out infinite}
+.globe-ring:nth-child(1){inset:0;animation-delay:0s}
+.globe-ring:nth-child(2){inset:-30px;animation-delay:.5s}
+.globe-ring:nth-child(3){inset:-60px;animation-delay:1s}
+.globe-core{position:absolute;inset:40px;background:linear-gradient(135deg,var(--teal),var(--orange));border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(254,84,0,.2)}
+.globe-core svg{width:80px;height:80px;fill:#fff}
+.route-dot{position:absolute;width:12px;height:12px;background:var(--orange);border-radius:50%;box-shadow:0 0 12px rgba(254,84,0,.5);animation:floatDot 4s ease-in-out infinite}
+.route-dot:nth-child(5){top:10%;left:20%;animation-delay:0s}
+.route-dot:nth-child(6){top:70%;left:15%;animation-delay:1s}
+.route-dot:nth-child(7){top:30%;right:10%;animation-delay:2s}
+.route-dot:nth-child(8){bottom:15%;right:25%;animation-delay:1.5s}
+
+@keyframes pulseRing{0%,100%{transform:scale(1);opacity:.12}50%{transform:scale(1.04);opacity:.25}}
+@keyframes floatDot{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-10px) scale(1.3)}}
+
+/* ── CARDS ── */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:20px}
+.card{background:var(--surface);border-radius:16px;padding:32px;box-shadow:var(--shadow);border:1px solid rgba(32,88,109,.06);transition:all .35s;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--orange));transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.card:hover::before{transform:scaleX(1)}
+.card-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.card-icon.orange{background:var(--orange-light)}
+.card-icon.teal{background:var(--teal-light)}
+.card-icon svg{width:24px;height:24px}
+.card h3{font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;color:var(--teal);margin-bottom:8px}
+.card p{font-size:.9rem;color:var(--text-secondary);line-height:1.65}
+
+/* ── TABLE ── */
+.data-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);margin-top:24px}
+.data-table th{background:var(--teal);color:#fff;padding:16px 24px;text-align:left;font-size:.8rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase}
+.data-table td{padding:16px 24px;border-bottom:1px solid rgba(32,88,109,.06);font-size:.95rem}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:hover td{background:var(--teal-light)}
+.risk-badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:.8rem;font-weight:600}
+.risk-low{background:#e8f5e9;color:#2e7d32}
+.risk-mid{background:#fff3e0;color:#e65100}
+.risk-high{background:#fce4ec;color:#c62828}
+.highlight-row td{background:var(--orange-light);font-weight:600}
+
+/* ── BAR CHART ── */
+.bar-chart{display:flex;align-items:flex-end;gap:32px;height:280px;padding:24px 0;margin-top:32px;border-bottom:2px solid rgba(32,88,109,.1)}
+.bar-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:10px}
+.bar{width:100%;border-radius:8px 8px 0 0;transition:height 1.5s cubic-bezier(.22,1,.36,1);position:relative}
+.bar-label{font-size:.75rem;color:var(--text-secondary);font-weight:500;text-align:center}
+.bar-value{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700}
+
+/* ── DONUT CHART ── */
+.donut-container{display:flex;align-items:center;gap:48px;margin-top:32px}
+.donut-svg{width:220px;height:220px;transform:rotate(-90deg)}
+.donut-track{fill:none;stroke:#eee;stroke-width:28}
+.donut-fill{fill:none;stroke-width:28;stroke-linecap:round;transition:stroke-dasharray 2s cubic-bezier(.22,1,.36,1)}
+.donut-legend{display:flex;flex-direction:column;gap:16px}
+.legend-item{display:flex;align-items:center;gap:12px;font-size:.95rem}
+.legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+
+/* ── TIMELINE ── */
+.timeline{position:relative;padding-left:48px;margin-top:32px}
+.timeline::before{content:'';position:absolute;left:16px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--teal),var(--orange))}
+.tl-item{position:relative;margin-bottom:36px;padding:24px;background:var(--surface);border-radius:12px;box-shadow:var(--shadow);border-left:3px solid var(--teal)}
+.tl-item::before{content:'';position:absolute;left:-40px;top:28px;width:14px;height:14px;background:var(--orange);border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 3px var(--orange)}
+.tl-item h4{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;color:var(--teal);margin-bottom:6px}
+.tl-item p{font-size:.9rem;color:var(--text-secondary);line-height:1.6}
+
+/* ── FLOW DIAGRAM ── */
+.flow-diagram{display:flex;align-items:center;justify-content:center;gap:0;margin-top:40px;flex-wrap:wrap}
+.flow-node{background:var(--surface);border:2px solid var(--teal);border-radius:12px;padding:20px 24px;text-align:center;min-width:160px;box-shadow:var(--shadow);position:relative}
+.flow-node.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+.flow-node.active h4{color:#fff}
+.flow-node.highlight{background:var(--orange);color:#fff;border-color:var(--orange)}
+.flow-node.highlight h4{color:#fff}
+.flow-node h4{font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;color:var(--teal);margin-bottom:4px}
+.flow-node p{font-size:.78rem;color:var(--text-secondary)}
+.flow-node.active p,.flow-node.highlight p{color:rgba(255,255,255,.85)}
+.flow-arrow{font-size:1.5rem;color:var(--teal);padding:0 8px}
+.flow-arrow svg{width:28px;height:28px;fill:var(--teal)}
+
+/* ──TWO-COL ── */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+
+/* ── FOOTER ── */
+.footer{background:var(--teal);color:#fff;padding:64px;text-align:center}
+.footer-logo{height:40px;margin-bottom:16px;filter:brightness(0) invert(1)}
+.footer p{opacity:.7;font-size:.85rem;max-width:480px;margin:0 auto}
+.footer-line{width:60px;height:2px;background:var(--orange);margin:20px auto}
+
+/* ── ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.22,1,.36,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:all .8s cubic-bezier(.22,1,.36,1)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:all .8s cubic-bezier(.22,1,.36,1)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.stagger>*{opacity:0;transform:translateY(24px);transition:all .6s cubic-bezier(.22,1,.36,1)}
+.stagger.visible>*{opacity:1;transform:translateY(0)}
+.stagger.visible>*:nth-child(1){transition-delay:.05s}
+.stagger.visible>*:nth-child(2){transition-delay:.15s}
+.stagger.visible>*:nth-child(3){transition-delay:.25s}
+.stagger.visible>*:nth-child(4){transition-delay:.35s}
+.stagger.visible>*:nth-child(5){transition-delay:.45s}
+
+/* ── COUNTER ── */
+.counter{font-family:'Outfit',sans-serif;font-weight:800}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .section{padding:100px 24px 60px}
+  .hero-grid,.two-col{grid-template-columns:1fr;gap:32px}
+  .hero-visual{height:300px}
+  .globe-container{width:260px;height:260px}
+  .nav{padding:0 20px}
+  .nav-links{display:none}
+  .flow-diagram{flex-direction:column}
+  .flow-arrow{transform:rotate(90deg)}
+  .donut-container{flex-direction:column;align-items:flex-start}
+}
+
+/* ── SCROLL PROGRESS ── */
+.progress-bar{position:fixed;top:64px;left:0;height:3px;background:linear-gradient(90deg,var(--teal),var(--orange));z-index:99;width:0%;transition:width .1s}
+
+/* ── IMPACT NUMBER ── */
+.impact-row{display:flex;gap:24px;margin-top:32px;flex-wrap:wrap}
+.impact-num{flex:1;min-width:180px;background:var(--surface);border-radius:16px;padding:28px;text-align:center;box-shadow:var(--shadow);border-top:3px solid var(--orange)}
+.impact-num .val{font-family:'Outfit',sans-serif;font-size:2.2rem;font-weight:800;color:var(--orange)}
+.impact-num .lbl{font-size:.8rem;color:var(--text-secondary);margin-top:4px}
+
+/* SVG ICON COLORS */
+.icon-orange{fill:var(--orange)}
+.icon-teal{fill:var(--teal)}
+.icon-white{fill:#fff}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <img src="https://wildbeesglobal.com/wp-content/uploads/2025/05/logo-01.png" alt="Wild Bees Global" class="nav-logo">
+  <ul class="nav-links">
+    <li><a href="#crisis">Market Context</a></li>
+    <li><a href="#risk">Risk Analysis</a></li>
+    <li><a href="#opportunity">Opportunity</a></li>
+    <li><a href="#strategy">Strategy</a></li>
+    <li><a href="#positioning">Positioning</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('positioning').scrollIntoView({behavior:'smooth'})">View Thesis</button>
+</nav>
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ════════════ SLIDE 1: HERO ════════════ -->
+<section class="section hero" id="hero">
+  <div class="section-inner">
+    <div class="hero-grid">
+      <div class="reveal-left">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          Strategic Market Assessment
+        </div>
+        <h1 class="hero-title">Navigating the GCC<br>Poultry <span>Supply Chain</span><br>Restructuring</h1>
+        <p class="hero-desc">A comprehensive analysis of the wholesale poultry import market transformation across the Gulf Cooperation Council region, and how Wild Bees Global is strategically positioned to consolidate market share during this critical inflection point.</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-val counter" data-target="35">0</div>
+            <div class="hero-stat-label">% SMEs At Risk</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val counter" data-target="500">0</div>
+            <div class="hero-stat-label">% Freight Increase</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val counter" data-target="90">0</div>
+            <div class="hero-stat-label">% GCC Food Imported</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal-right">
+        <div class="globe-container">
+          <div class="globe-ring"></div>
+          <div class="globe-ring"></div>
+          <div class="globe-ring"></div>
+          <div class="globe-core">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          </div>
+          <div class="route-dot"></div>
+          <div class="route-dot"></div>
+          <div class="route-dot"></div>
+          <div class="route-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 2: THE CRISIS ════════════ -->
+<section class="section" id="crisis" style="background:#fff">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-tag">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+        Market Context
+      </div>
+      <h2 class="section-title">A Tier-1 Supply Chain <span>Emergency</span></h2>
+      <p class="section-subtitle">The GCC wholesale poultry sector is experiencing a multi-layer systemic shock — not a temporary disruption, but a structural market reset event that is reshaping the competitive landscape.</p>
+    </div>
+    <div class="card-grid stagger">
+      <div class="card">
+        <div class="card-icon orange">
+          <svg viewBox="0 0 24 24" class="icon-orange"><path d="M20 21c-1.39 0-2.78-.47-4-1.32-2.44 1.71-5.56 1.71-8 0C6.78 20.53 5.39 21 4 21H2v2h2c1.38 0 2.74-.35 4-.99 2.52 1.29 5.48 1.29 8 0 1.26.65 2.62.99 4 .99h2v-2h-2zM3.95 19H4c1.6 0 3.02-.88 4-2 .98 1.12 2.4 2 4 2s3.02-.88 4-2c.98 1.12 2.4 2 4 2h.05l1.89-6.68c.08-.26.06-.54-.06-.78s-.34-.42-.6-.5L20 10.62V6c0-1.1-.9-2-2-2h-3V1H9v3H6c-1.1 0-2 .9-2 2v4.62l-1.29.42c-.26.08-.48.26-.6.5s-.14.52-.05.78L3.95 19zM6 6h12v3.97L12 8 6 9.97V6z"/></svg>
+        </div>
+        <h3>Shipping Routes Disrupted</h3>
+        <p>Critical maritime passages through the Strait of Hormuz and Red Sea face unprecedented operational challenges, directly impacting cold-chain logistics timelines and reliability.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon teal">
+          <svg viewBox="0 0 24 24" class="icon-teal"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+        </div>
+        <h3>Freight Costs Surging</h3>
+        <p>Logistics expenditure has escalated by 250% to 500%, compressing already thin operating margins of 3-10% that define the wholesale import sector across the region.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon orange">
+          <svg viewBox="0 0 24 24" class="icon-orange"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        </div>
+        <h3>Insurance Premiums Rising</h3>
+        <p>War-risk insurance for Gulf-bound cargo has reached historic levels, adding substantial per-container costs that eliminate profitability for undercapitalized operators.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon teal">
+          <svg viewBox="0 0 24 24" class="icon-teal"><path d="M18.67 3H5.33C4.6 3 4 3.6 4 4.33v15.34C4 20.4 4.6 21 5.33 21h13.34c.73 0 1.33-.6 1.33-1.33V4.33C20 3.6 19.4 3 18.67 3zM12 8c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8H8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"/></svg>
+        </div>
+        <h3>Origin Concentration Risk</h3>
+        <p>Brazil — the primary source for GCC poultry — is among the most logistics-affected exporters, while global feed and production costs continue to accelerate upward.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 3: RISK ANALYSIS ════════════ -->
+<section class="section" id="risk" style="background:var(--bg)">
+  <div class="section-inner">
+    <div class="two-col">
+      <div class="reveal-left">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+          Risk Assessment
+        </div>
+        <h2 class="section-title">SME Attrition <span>Forecast</span></h2>
+        <p class="section-subtitle">Industry analysis indicates that a significant portion of wholesale poultry importers face existential business risk, creating a window for strategically prepared operators.</p>
+        <table class="data-table">
+          <thead><tr><th>Scenario</th><th>SME Exit Risk</th><th>Severity</th></tr></thead>
+          <tbody>
+            <tr><td>Mild Disruption</td><td>10 – 15%</td><td><span class="risk-badge risk-low">Moderate</span></td></tr>
+            <tr class="highlight-row"><td>Current Situation</td><td>20 – 35%</td><td><span class="risk-badge risk-mid">Elevated</span></td></tr>
+            <tr><td>Prolonged Disruption</td><td>40%+</td><td><span class="risk-badge risk-high">Critical</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="reveal-right">
+        <h3 style="font-family:'Outfit',sans-serif;font-weight:700;color:var(--teal);margin-bottom:8px;margin-top:60px">Margin Compression Model</h3>
+        <p style="font-size:.88rem;color:var(--text-secondary);margin-bottom:8px">Impact of cost increases on typical importer margins (3-10% baseline)</p>
+        <div class="bar-chart" id="barChart">
+          <div class="bar-col">
+            <div class="bar-value" style="color:var(--teal)">10%</div>
+            <div class="bar" style="height:0;background:var(--teal)" data-height="36%"></div>
+            <div class="bar-label">Baseline Margin</div>
+          </div>
+          <div class="bar-col">
+            <div class="bar-value" style="color:var(--orange)">+250%</div>
+            <div class="bar" style="height:0;background:var(--orange)" data-height="70%"></div>
+            <div class="bar-label">Freight Surge</div>
+          </div>
+          <div class="bar-col">
+            <div class="bar-value" style="color:var(--gray)">+40%</div>
+            <div class="bar" style="height:0;background:var(--gray)" data-height="48%"></div>
+            <div class="bar-label">Insurance</div>
+          </div>
+          <div class="bar-col">
+            <div class="bar-value" style="color:#c62828">-8%</div>
+            <div class="bar" style="height:0;background:#c62828" data-height="85%"></div>
+            <div class="bar-label">Net Result</div>
+          </div>
+        </div>
+        <p style="font-size:.82rem;color:var(--text-secondary);margin-top:16px;font-style:italic">Even a 10-20% cost shock eliminates profit, drains cash reserves, and can result in business failure within 2-3 operating cycles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 4: WHO FAILS FIRST ════════════ -->
+<section class="section" id="vulnerability" style="background:#fff">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-tag">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        Vulnerability Profile
+      </div>
+      <h2 class="section-title">Identifying At-Risk <span>Market Participants</span></h2>
+      <p class="section-subtitle">The market correction will not impact all participants equally. Structural weaknesses determine the order of attrition — and by extension, which market share becomes available for acquisition.</p>
+    </div>
+
+    <!-- FLOW DIAGRAM: Failure cascade -->
+    <div class="flow-diagram reveal" style="margin-bottom:48px">
+      <div class="flow-node active"><h4>Single Supplier</h4><p>Brazil-only sourcing</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></div>
+      <div class="flow-node active"><h4>Credit Exposure</h4><p>Extended payment cycles</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></div>
+      <div class="flow-node active"><h4>Low Cash Reserve</h4><p>Insufficient capital buffer</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></div>
+      <div class="flow-node highlight"><h4>Market Exit</h4><p>Business failure</p></div>
+    </div>
+
+    <div class="card-grid stagger">
+      <div class="card">
+        <div class="card-icon orange"><svg viewBox="0 0 24 24" class="icon-orange"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-4h2v2h-2zm1-10c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z"/></svg></div>
+        <h3>Commodity Dependence</h3>
+        <p>Operators selling undifferentiated frozen bulk product with no value-add positioning face direct price competition from every other importer — a race to the bottom.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon teal"><svg viewBox="0 0 24 24" class="icon-teal"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg></div>
+        <h3>Cash Flow Fragility</h3>
+        <p>Many businesses do not fail from operating losses alone — they fail because cash flow timing mismatches between payables and receivables create terminal liquidity gaps.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon orange"><svg viewBox="0 0 24 24" class="icon-orange"><path d="M15.5 1h-8C6.12 1 5 2.12 5 3.5v17C5 21.88 6.12 23 7.5 23h8c1.38 0 2.5-1.12 2.5-2.5v-17C18 2.12 16.88 1 15.5 1zm-4 21c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4.5-4H7V4h9v14z"/></svg></div>
+        <h3>Scale Disadvantage</h3>
+        <p>Small-scale importers without consolidated logistics infrastructure lack the negotiating power and volume discounts necessary to absorb systemic cost increases.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 5: POST-CRISIS LANDSCAPE ════════════ -->
+<section class="section" id="opportunity" style="background:var(--bg)">
+  <div class="section-inner">
+    <div class="two-col">
+      <div class="reveal-left">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24"><path fill="currentColor" d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+          Post-Restructuring Landscape
+        </div>
+        <h2 class="section-title">The <span>New Market</span> Reality</h2>
+        <p class="section-subtitle">Historical precedent shows that supply chain crises of this magnitude permanently alter market structure. The industry will not revert to its prior configuration.</p>
+
+        <div class="donut-container">
+          <svg class="donut-svg" viewBox="0 0 160 160">
+            <circle class="donut-track" cx="80" cy="80" r="60"/>
+            <circle class="donut-fill" cx="80" cy="80" r="60" stroke="var(--teal)" stroke-dasharray="0 377" data-dash="188 377"/>
+            <circle class="donut-fill" cx="80" cy="80" r="60" stroke="var(--orange)" stroke-dasharray="0 377" data-dash="94 377" data-offset="188"/>
+            <circle class="donut-fill" cx="80" cy="80" r="60" stroke="var(--gray)" stroke-dasharray="0 377" data-dash="60 377" data-offset="282"/>
+          </svg>
+          <div class="donut-legend">
+            <div class="legend-item"><span class="legend-dot" style="background:var(--teal)"></span>Consolidated Players (50%)</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--orange)"></span>New Entrants / Value-Add (25%)</div>
+            <div class="legend-item"><span class="legend-dot" style="background:var(--gray)"></span>Remaining Incumbents (16%)</div>
+            <div class="legend-item"><span class="legend-dot" style="background:#ccc"></span>Market Exits (9%)</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right" style="padding-top:60px">
+        <div class="timeline">
+          <div class="tl-item">
+            <h4>Market Consolidation</h4>
+            <p>Fewer but stronger operators will emerge, with strategically agile SMEs absorbing the customer base of exiting competitors. Volume concentrates among prepared players.</p>
+          </div>
+          <div class="tl-item">
+            <h4>Supply Diversification Standard</h4>
+            <p>The post-crisis norm will require multi-origin sourcing — Brazil, USA, Turkey, EU, and regional producers — as a baseline operational requirement.</p>
+          </div>
+          <div class="tl-item">
+            <h4>Elevated Price Floor</h4>
+            <p>A structurally higher cost baseline (freight, insurance, risk premium) means prices will not fully revert, improving margins for scale operators.</p>
+          </div>
+          <div class="tl-item">
+            <h4>Value-Added Growth</h4>
+            <p>Processed poultry, portioned products, marinated and ready-to-cook lines, and premium halal branded offerings represent the highest-growth category within the sector.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 6: STRATEGIC OPPORTUNITIES ════════════ -->
+<section class="section" id="opportunities" style="background:#fff">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-tag">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+        Strategic Opportunity
+      </div>
+      <h2 class="section-title">Value Creation Through <span>Market Dislocation</span></h2>
+      <p class="section-subtitle">Market restructuring events generate asymmetric opportunity. Capital flows from exiting participants to those positioned to absorb demand — a wealth transfer dynamic that rewards preparation.</p>
+    </div>
+
+    <div class="impact-row stagger">
+      <div class="impact-num">
+        <div class="val">2x</div>
+        <div class="lbl">Volume Growth Potential<br>from competitor exits</div>
+      </div>
+      <div class="impact-num">
+        <div class="val">70-90%</div>
+        <div class="lbl">GCC Food Import Ratio<br>structural dependency</div>
+      </div>
+      <div class="impact-num">
+        <div class="val">20-30%</div>
+        <div class="lbl">Market Share Available<br>from weakened operators</div>
+      </div>
+      <div class="impact-num">
+        <div class="val">3-5x</div>
+        <div class="lbl">Margin Improvement<br>via value-added products</div>
+      </div>
+    </div>
+
+    <div class="card-grid stagger" style="margin-top:36px">
+      <div class="card">
+        <div class="card-icon teal"><svg viewBox="0 0 24 24" class="icon-teal"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg></div>
+        <h3>Market Share Acquisition</h3>
+        <p>As 20-30% of operators face distress, their established customer relationships, distribution channels, and volume become acquirable at favorable terms.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon orange"><svg viewBox="0 0 24 24" class="icon-orange"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg></div>
+        <h3>Direct Supplier Partnerships</h3>
+        <p>Establishing direct relationships with Brazilian integrators and USA/Turkey exporters eliminates intermediary margins, creating structural cost advantages.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon teal"><svg viewBox="0 0 24 24" class="icon-teal"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg></div>
+        <h3>Regional Production Access</h3>
+        <p>Government-backed initiatives to reduce GCC food import dependency (currently 70-90%) are creating investment opportunities in local poultry production and processing facilities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 7: STRATEGY ════════════ -->
+<section class="section" id="strategy" style="background:var(--bg)">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-tag">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 6l-1-2H5v17h2v-7h5l1 2h7V6h-6zm4 8h-4l-1-2H7V6h5l1 2h5v6z"/></svg>
+        Operational Framework
+      </div>
+      <h2 class="section-title">Wild Bees Global <span>Strategic Playbook</span></h2>
+      <p class="section-subtitle">A five-pillar framework designed to maximize resilience and capture market share during the restructuring period, positioning the company as a consolidation leader.</p>
+    </div>
+
+    <div class="timeline stagger" style="margin-top:16px">
+      <div class="tl-item">
+        <h4>Pillar 1 — Cash Flow Primacy</h4>
+        <p>Prioritize liquidity over paper profitability. Reduce credit exposure, shorten receivable cycles, and maintain disciplined inventory levels. In a margin-compressed environment, cash position determines survival.</p>
+      </div>
+      <div class="tl-item">
+        <h4>Pillar 2 — Supply Diversification</h4>
+        <p>Eliminate single-origin dependency by establishing sourcing relationships across a minimum of 3 geographies — Brazil, USA, and Turkey/EU — with a balanced frozen and chilled product mix.</p>
+      </div>
+      <div class="tl-item">
+        <h4>Pillar 3 — Value Chain Elevation</h4>
+        <p>Transition from commodity bulk trading toward higher-margin segments: portioned products, marinated and ready-to-cook lines, and branded premium halal offerings that command pricing power.</p>
+      </div>
+      <div class="tl-item">
+        <h4>Pillar 4 — Dynamic Pricing Architecture</h4>
+        <p>Replace fixed long-term contracts with flexible, short-cycle pricing mechanisms that incorporate cost-passthrough clauses, protecting margins during periods of input cost volatility.</p>
+      </div>
+      <div class="tl-item">
+        <h4>Pillar 5 — Consolidation Posture</h4>
+        <p>Adopt an acquisitive mindset — identify weakening competitors and systematically absorb their customer base, distribution relationships, and volume. Approach the market as a consolidator, not merely a survivor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SLIDE 8: POSITIONING ════════════ -->
+<section class="section" id="positioning" style="background:#fff">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-tag">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        Strategic Thesis
+      </div>
+      <h2 class="section-title">Why <span>Wild Bees Global</span> is<br>Positioned for This Moment</h2>
+      <p class="section-subtitle">Market restructuring events of this magnitude occur once per cycle. Organizations with the right combination of operational agility, capital discipline, and strategic vision emerge as the defining players of the next era.</p>
+    </div>
+
+    <!-- Summary Flow -->
+    <div class="flow-diagram reveal" style="margin-bottom:48px">
+      <div class="flow-node"><h4>Market Crisis</h4><p>Supply chain shock</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></div>
+      <div class="flow-node"><h4>SME Attrition</h4><p>20-35% exit risk</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></div>
+      <div class="flow-node active"><h4>Demand Transfer</h4><p>Market share shifts</p></div>
+      <div class="flow-arrow"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg></div>
+      <div class="flow-node highlight"><h4>Wild Bees Global</h4><p>Strategic capture</p></div>
+    </div>
+
+    <div class="impact-row stagger">
+      <div class="impact-num">
+        <div class="val">6-12</div>
+        <div class="lbl">Month Restructuring<br>Window</div>
+      </div>
+      <div class="impact-num">
+        <div class="val">5</div>
+        <div class="lbl">Strategic Pillars<br>Operational Framework</div>
+      </div>
+      <div class="impact-num">
+        <div class="val">3+</div>
+        <div class="lbl">Sourcing Origins<br>Diversification Target</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top:48px;background:linear-gradient(135deg,var(--teal),#1a4a5c);border-radius:20px;padding:48px;color:#fff;text-align:center">
+      <h3 style="font-family:'Outfit',sans-serif;font-size:1.6rem;font-weight:700;margin-bottom:12px">This is not a challenge to weather — it is a market-defining moment to leverage.</h3>
+      <p style="opacity:.8;max-width:640px;margin:0 auto;line-height:1.8;font-size:.95rem">Wild Bees Global has developed the operational framework, supply chain architecture, and financial discipline required to capitalise on the structural transformation reshaping the GCC wholesale poultry sector. The question is not whether the market will consolidate — it is who will lead the consolidation.</p>
+      <div style="margin-top:28px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap">
+        <a href="#hero" style="display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.9rem;transition:all .25s">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-1 9h-4v4h-2v-4H9V9h4V5h2v4h4v2z"/></svg>
+          Review Full Presentation
+        </a>
+        <a href="mailto:info@wildbeesglobal.com" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);color:#fff;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:600;font-size:.9rem;border:1px solid rgba(255,255,255,.25);transition:all .25s">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="#fff"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          Request Detailed Briefing
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="https://wildbeesglobal.com/wp-content/uploads/2025/05/logo-01.png" alt="Wild Bees Global" class="footer-logo">
+  <div class="footer-line"></div>
+  <p>Wild Bees Global — Strategic positioning in GCC food supply chain transformation. This document is prepared for qualified stakeholders and contains forward-looking market analysis based on current industry conditions.</p>
+  <p style="margin-top:16px;opacity:.5;font-size:.75rem">&copy; 2026 Wild Bees Global. All rights reserved. Confidential.</p>
+</footer>
+
+<script>
+// ── Scroll Reveal ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); }});
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.stagger').forEach(el => observer.observe(el));
+
+// ── Nav scroll effect ──
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20);
+  const h = document.documentElement.scrollHeight - window.innerHeight;
+  document.getElementById('progressBar').style.width = (window.scrollY / h * 100) + '%';
+});
+
+// ── Counter animation ──
+const counterObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting && !e.target.dataset.done){
+      e.target.dataset.done = '1';
+      const target = +e.target.dataset.target;
+      let current = 0;
+      const step = target / 60;
+      const timer = setInterval(() => {
+        current += step;
+        if(current >= target){ current = target; clearInterval(timer); }
+        e.target.textContent = Math.round(current);
+      }, 25);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.counter').forEach(el => counterObs.observe(el));
+
+// ── Bar chart animation ──
+const barObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.querySelectorAll('.bar').forEach((bar, i) => {
+        setTimeout(() => { bar.style.height = bar.dataset.height; }, i * 200);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.bar-chart').forEach(el => barObs.observe(el));
+
+// ── Donut chart animation ──
+const donutObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting && !e.target.dataset.done){
+      e.target.dataset.done = '1';
+      e.target.querySelectorAll('.donut-fill').forEach((c, i) => {
+        setTimeout(() => {
+          c.style.strokeDasharray = c.dataset.dash;
+          if(c.dataset.offset) c.style.strokeDashoffset = '-' + c.dataset.offset;
+        }, i * 400);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.donut-svg').forEach(el => donutObs.observe(el));
+</script>
+</body>
+</html>
